@@ -32,10 +32,8 @@ const App = () => {
           nextLastDigit = lastDigit + 1;
         } else {
           nextLastDigit = 0;
-        }
 
-        if (nextLastDigit === 1) {
-          setCounterFirstDigits(digits => (parseInt(digits) + 1).toString());
+          setTimeout(() => setCounterFirstDigits(digits => (parseInt(digits) + 1).toString()), 500);
         }
 
         return nextLastDigit;
