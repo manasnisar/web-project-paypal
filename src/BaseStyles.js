@@ -21,36 +21,34 @@ export default createGlobalStyle`
   }
 
   :root {
-    --primary: #0070ba;
-    --secondary: #0d3685;
-    --link: #00a8ea;
-    --light-text-1: #fff;
-    --dark-text-1: #2c2e2f;
-    --dark-text-2: #4a4a4a;
-    --dark-text-3:#000;
-    --signup-button: #fcbb32;
-    --business-button: #fff;
-    --new-badge: #fbb333;
-    --background-1: #fff;
-    --background-2: #f0f5ff;
-    --background-3: #00a8ea;
+    --blue-1: #0d3685;
+    --blue-2: #0070ba;
+
+    --yellow-1: #fbb333;
+    
+    --neutral-1: #fff;
+    --neutral-2: #2c2e2f;
+    --neutral-3: #6c7378;
+    --neutral-4: #f0f5ff;
+    --neutral-5: #4a4a4a;
   }
 
 
   * {
     margin: 0;
     padding: 0;
-    outline: none;
     box-sizing: border-box;
-    border: none;
     font-family: 'PayPal Sans Small', sans-serif;
+    text-decoration:none;
+    outline: none;
+    border: none;
     background: none;
   }
 
   body {
-    font-size: 18px;
+    font-size: 16px;
     -webkit-font-smoothing: antialiased;
-    color: var(--dark-text-1);
+    color: var(--neutral-2);
     background: var(--background);
   }
 
@@ -61,12 +59,20 @@ export default createGlobalStyle`
   }
 
   h1 {
-    color: var(--dark-text-2);
+    color: var(--neutral-5);
     font-family: 'PayPal Sans Big';
     font-size: 30px;
   }
 
-  a, button{
+  a, button {
     cursor: pointer;
+  }
+  
+  a {
+    color: var(--blue-2);
+
+    :hover {
+      text-decoration: underline;
+    }
   }
 `;

@@ -9,7 +9,7 @@ const Button = styled.button`
   justify-content: center;
   font-size: 12px;
   font-weight: 700;
-  color: var(--primary);
+  color: var(--blue-1);
   border-radius: 100px;
   cursor: pointer;
 `;
@@ -37,7 +37,8 @@ export const HeaderLogo = styled.img`
 `;
 
 export const HeaderButton = styled(Button)`
-  border: 1px solid var(--primary);
+  color: var(--blue-2);
+  border: 1px solid var(--blue-2);
 `;
 
 /**
@@ -47,7 +48,7 @@ export const HeaderButton = styled(Button)`
 export const Intro = styled.section`
   width: 100%;
   padding-top: 40px;
-  background: var(--background-2);
+  background: var(--neutral-4);
 `;
 
 export const IntroContent = styled.div`
@@ -64,9 +65,9 @@ export const IntroSignUpButton = styled(Button)`
   width: 100%;
   height: 48px;
   margin-top: 40px;
-  color: var(--secondary);
+  color: var(--blue-1);
   font-size: 14px;
-  background: var(--signup-button);
+  background: var(--yellow-1);
 `;
 
 export const IntroVideo = styled.video`
@@ -83,13 +84,13 @@ export const IntroVideo = styled.video`
 export const Business = styled.section`
   width: 100%;
   padding: 30px 0;
-  background: var(--secondary);
+  background: var(--blue-1);
 `;
 
 export const BusinessTitle = styled.h4`
   font-family: 'PayPal Sans Big';
   font-weight: 100;
-  color: var(--light-text-1);
+  color: var(--neutral-1);
   text-align: center;
 `;
 
@@ -99,9 +100,9 @@ export const BusinessButton = styled(Button)`
   height: 36px;
   margin: 0 auto;
   margin-top: 20px;
-  color: var(--secondary);
+  color: var(--blue-1);
   font-size: 12px;
-  background: var(--business-button);
+  background: var(--neutral-1);
 `;
 
 /**
@@ -109,13 +110,11 @@ export const BusinessButton = styled(Button)`
  */
 
 export const Feature = styled.section`
-  width: 100%;
-  padding: 40px 40px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   text-align: center;
-  background: ${({ variant }) =>
-    variant === 'white-bg' ? 'var(--background-1)' : 'var(--background-2)'};
+  background: ${({ whiteBg }) => (whiteBg ? 'var(--neutral-1)' : 'var(--neutral-4)')};
 `;
 
 export const FeatureTitle = styled.h1`
@@ -131,17 +130,11 @@ export const FeatureImage = styled.img`
 
 export const FeatureText = styled.span`
   line-height: 1.5;
-  font-size: 16px;
 `;
 
 export const FeatureLink = styled.a`
   margin-top: 20px;
-  font-size: 16px;
-  color: var(--link);
-
-  :hover {
-    text-decoration: underline;
-  }
+  font-weight: 600;
 `;
 
 export const FeatureNewBadge = styled.span`
@@ -154,8 +147,8 @@ export const FeatureNewBadge = styled.span`
   justify-content: center;
   border-radius: 50%;
   font-size: 18px;
-  color: var(--light-text-1);
-  background: var(--new-badge);
+  color: var(--neutral-1);
+  background: var(--yellow-1);
 `;
 
 /**
@@ -202,21 +195,22 @@ export const Brand = styled.img`
  */
 
 export const JoinCommunity = styled(Feature)`
-  padding: 40px 20px;
+  padding: 60px 20px;
   align-items: center;
-  background: var(--background-3);
+  background: var(--blue-1);
 `;
 
 export const JoinCommunityTitle = styled.h1`
   margin-bottom: 26px;
-  color: var(--light-text-1);
+  color: var(--neutral-1);
 `;
 
 export const JoinCommunitySignUpButton = styled(IntroSignUpButton)`
   width: 100%;
   max-width: 300px;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
+  background: var(--neutral-1);
 `;
 
 export const Counter = styled.div`
@@ -235,11 +229,11 @@ export const CounterDigitWrapper = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  background: var(--background-1);
+  background: var(--blue-2);
 `;
 
 export const CounterDigit = styled.span`
-  color: var(--dark-text-3);
+  color: var(--neutral-1);
   font-size: 26px;
   font-weight: 700;
 `;
@@ -283,4 +277,55 @@ export const CounterLastDigitAfter = styled(CounterLastDigit)`
   }
 
   animation: bottomToMiddle 1s ease;
+`;
+
+export const Footer = styled.footer`
+  width: 100%;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+export const FooterUsFlag = styled.img`
+  align-self: center;
+`;
+
+export const FooterLinks = styled.div`
+  margin-bottom: 16px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  * {
+    margin-top: 6px;
+    margin-right: 14px;
+  }
+
+  a:last-child {
+    margin-right: 0;
+  }
+`;
+
+export const Disclaimer = styled.div`
+  padding: 40px 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--neutral-2);
+`;
+
+export const FooterTopLink = styled.a`
+  font-weight: 600;
+  color: var(--neutral-2);
+`;
+
+export const FooterLink = styled.a`
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--neutral-3);
+`;
+
+export const FooterCopyright = styled.span`
+  font-size: 14px;
+  color: var(--neutral-3);
 `;

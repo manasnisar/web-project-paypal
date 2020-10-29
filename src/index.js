@@ -2,18 +2,19 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { FaBars } from 'react-icons/fa';
 
-import Logo from '~/assets/logo.svg';
-import PhoneVideo1 from '~/assets/phone_video_1.mp4';
-import PurpleYoga from '~/assets/purple_yoga.png';
-import Notifications from '~/assets/notifications.gif';
-import PayTouchFree from '~/assets/pay_touch_free.gif';
-import CoinyHill from '~/assets/coiny_hill.png';
-import HuluLogo from '~/assets/hulu_logo.png';
-import GrubhubLogo from '~/assets/grubhub_logo.png';
-import PotteryBarnLogo from '~/assets/potterybarn_logo.png';
-import SpotifyLogo from '~/assets/spotify_logo.png';
-import UltaLogo from '~/assets/ulta_logo.png';
-import GrouponLogo from '~/assets/groupon_logo.png';
+import logo from '~/assets/logo.svg';
+import phoneVideo1 from '~/assets/phone_video_1.mp4';
+import purpleYogaImage from '~/assets/purple_yoga.png';
+import notificationsImage from '~/assets/notifications.gif';
+import payTouchFreeImage from '~/assets/pay_touch_free.gif';
+import coinyHillImage from '~/assets/coiny_hill.png';
+import usFlagImage from '~/assets/us-flag.jpg';
+import huluLogo from '~/assets/hulu_logo.png';
+import grubhubLogo from '~/assets/grubhub_logo.png';
+import potteryBarnLogo from '~/assets/potterybarn_logo.png';
+import spotifyLogo from '~/assets/spotify_logo.png';
+import ultaLogo from '~/assets/ulta_logo.png';
+import grouponLogo from '~/assets/groupon_logo.png';
 
 import BaseStyles from './BaseStyles';
 import * as s from './styles';
@@ -54,7 +55,7 @@ const App = () => {
           <FaBars style={{ marginRight: 8 }} color="var(--primary)" />
           Menu
         </s.HeaderButton>
-        <s.HeaderLogo src={Logo} />
+        <s.HeaderLogo src={logo} />
         <s.HeaderButton>Log In</s.HeaderButton>
       </s.Header>
       <main>
@@ -64,13 +65,15 @@ const App = () => {
             <s.IntroSignUpButton>Sign Up for Free</s.IntroSignUpButton>
           </s.IntroContent>
           <s.IntroVideo muted autoPlay loop>
-            <source type="video/mp4" src={PhoneVideo1} />
+            <source type="video/mp4" src={phoneVideo1} />
           </s.IntroVideo>
         </s.Intro>
+
         <s.Business>
           <s.BusinessTitle>Looking for PayPal for Business?</s.BusinessTitle>
           <s.BusinessButton>PayPal for Business</s.BusinessButton>
         </s.Business>
+
         <s.Feature>
           <s.HelpingYouVideoContainer>
             <s.HelpingYouVideo src="https://www.youtube-nocookie.com/embed/Rr_sRAOn45Y?autoplay=0&amp;rel=0&amp;autohide=2&amp;border=0&amp;wmode=opaque&amp;showinfo=0&amp;hd=1&amp;playsinline=1&amp;enablejsapi=1&amp;modestbranding=1&amp;mute=1"></s.HelpingYouVideo>
@@ -81,8 +84,9 @@ const App = () => {
             securely paying your online Pilates instructor, to getting take out touch free.
           </s.FeatureText>
         </s.Feature>
-        <s.Feature variant="white-bg">
-          <s.FeatureImage src={PurpleYoga} />
+
+        <s.Feature whiteBg>
+          <s.FeatureImage src={purpleYogaImage} />
           <s.FeatureTitle>Send money in seconds</s.FeatureTitle>
           <s.FeatureText>
             Do more with friends – send money, split bills and pool funds from friends quickly and
@@ -90,8 +94,9 @@ const App = () => {
           </s.FeatureText>
           <s.FeatureLink>Download the App</s.FeatureLink>
         </s.Feature>
+
         <s.Feature>
-          <s.FeatureImage src={Notifications} />
+          <s.FeatureImage src={notificationsImage} />
           <s.FeatureTitle>Get instant spend notifications</s.FeatureTitle>
           <s.FeatureText>
             Whether shopping at your usual store or somewhere new, we help keep checkout fast and
@@ -100,8 +105,9 @@ const App = () => {
           </s.FeatureText>
           <s.FeatureLink>Download the App</s.FeatureLink>
         </s.Feature>
-        <s.Feature variant="white-bg">
-          <s.FeatureImage src={PayTouchFree} />
+
+        <s.Feature whiteBg>
+          <s.FeatureImage src={payTouchFreeImage} />
           <s.FeatureNewBadge>New</s.FeatureNewBadge>
           <s.FeatureTitle>Pay touch-free</s.FeatureTitle>
           <s.FeatureText>
@@ -110,8 +116,9 @@ const App = () => {
           </s.FeatureText>
           <s.FeatureLink>Learn More</s.FeatureLink>
         </s.Feature>
+
         <s.Feature>
-          <s.FeatureImage src={CoinyHill} />
+          <s.FeatureImage src={coinyHillImage} />
           <s.FeatureNewBadge>New</s.FeatureNewBadge>
           <s.FeatureTitle>Save more when you shop online with Honey</s.FeatureTitle>
           <s.FeatureText>
@@ -120,34 +127,36 @@ const App = () => {
           </s.FeatureText>
           <s.FeatureLink>Join Honey</s.FeatureLink>
         </s.Feature>
-        <s.Feature variant="white-bg">
+
+        <s.Feature whiteBg>
           <s.FeatureTitle>Checkout with millions of brands you love</s.FeatureTitle>
           <s.BrandsContainer>
             <s.BrandWrapper>
-              <s.Brand src={HuluLogo} />
+              <s.Brand src={huluLogo} />
             </s.BrandWrapper>
             <s.BrandWrapper>
-              <s.Brand src={GrubhubLogo} />
+              <s.Brand src={grubhubLogo} />
             </s.BrandWrapper>
             <s.BrandWrapper>
-              <s.Brand src={PotteryBarnLogo} />
+              <s.Brand src={potteryBarnLogo} />
             </s.BrandWrapper>
             <s.BrandWrapper>
-              <s.Brand src={SpotifyLogo} />
+              <s.Brand src={spotifyLogo} />
             </s.BrandWrapper>
             <s.BrandWrapper>
-              <s.Brand src={UltaLogo} />
+              <s.Brand src={ultaLogo} />
             </s.BrandWrapper>
             <s.BrandWrapper>
-              <s.Brand src={GrouponLogo} />
+              <s.Brand src={grouponLogo} />
             </s.BrandWrapper>
           </s.BrandsContainer>
         </s.Feature>
+
         <s.JoinCommunity>
           <s.JoinCommunityTitle>
             Join the global community of 325 million PayPal users
           </s.JoinCommunityTitle>
-          <s.JoinCommunitySignUpButton>Sign Up Now</s.JoinCommunitySignUpButton>
+          <s.JoinCommunitySignUpButton>Sign Up for Free</s.JoinCommunitySignUpButton>
           <s.Counter>
             {counterFirstDigits.split('').map(number => (
               <s.CounterDigitWrapper key={Math.random().toString()}>
@@ -167,6 +176,44 @@ const App = () => {
           </s.Counter>
         </s.JoinCommunity>
       </main>
+      <s.Disclaimer>
+        Paying friends back, or chipping in requires that you have an account with PayPal. Creating
+        a Money Pools page requires a PayPal Cash or Cash Plus account. A recipient will need to
+        create an account with PayPal to receive money, if they don't already have one.
+        <br />
+        <br />
+        Terms and limitations apply. See terms at{' '}
+        <a href="https://www.paypal.com/purchaseprotection">www.paypal.com/purchaseprotection</a>
+      </s.Disclaimer>
+
+      <s.Footer>
+        <s.FooterUsFlag src={usFlagImage} alt="United States flag" />
+        <s.FooterLinks>
+          <s.FooterTopLink href="#">Help</s.FooterTopLink>
+          <s.FooterTopLink href="#">Contact</s.FooterTopLink>
+          <s.FooterTopLink href="#">Fees</s.FooterTopLink>
+          <s.FooterTopLink href="#">Security</s.FooterTopLink>
+          <s.FooterTopLink href="#">Apps</s.FooterTopLink>
+          <s.FooterTopLink href="#">Shop</s.FooterTopLink>
+        </s.FooterLinks>
+        <s.FooterLinks>
+          <s.FooterLink href="#">About</s.FooterLink>
+          <s.FooterLink href="#">Newsroom</s.FooterLink>
+          <s.FooterLink href="#">Jobs</s.FooterLink>
+          <s.FooterLink href="#">Investor Relations</s.FooterLink>
+          <s.FooterLink href="#">Social Innovation</s.FooterLink>
+          <s.FooterLink href="#">Public Policy</s.FooterLink>
+          <s.FooterLink href="#">Sitemap</s.FooterLink>
+          <s.FooterLink href="#">Enterprise</s.FooterLink>
+          <s.FooterLink href="#">Partners</s.FooterLink>
+        </s.FooterLinks>
+        <s.FooterLinks>
+          <s.FooterCopyright>&copy; 1999–2020</s.FooterCopyright>
+          <s.FooterLink href="#">Accessibility</s.FooterLink>
+          <s.FooterLink href="#">Privacy</s.FooterLink>
+          <s.FooterLink href="#">Legal</s.FooterLink>
+        </s.FooterLinks>
+      </s.Footer>
     </div>
   );
 };
