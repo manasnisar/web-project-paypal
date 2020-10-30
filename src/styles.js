@@ -1,7 +1,35 @@
 import styled from 'styled-components';
 
+export const Container = styled.div`
+  .content {
+    width: 100%;
+    position: absolute;
+    transition: left 300ms;
+  }
+
+  .content-enter {
+    left: 0;
+  }
+
+  .content-enter-active {
+    left: 240px;
+  }
+
+  .content-enter-done {
+    left: 240px;
+  }
+
+  .content-exit {
+    left: 240px;
+  }
+
+  .content-exit-active {
+    left: 0;
+  }
+`;
+
 const Button = styled.button`
-  width: 84px;
+  width: 86px;
   height: 38px;
   padding: 10px;
   display: flex;
@@ -20,7 +48,7 @@ const Button = styled.button`
 
 export const Header = styled.header`
   width: 100%;
-  height: 56px;
+  height: 60px;
   padding: 0 40px;
   display: flex;
   flex-direction: row;
@@ -36,9 +64,60 @@ export const HeaderLogo = styled.img`
   object-position: 0;
 `;
 
-export const HeaderButton = styled(Button)`
+export const HeaderButton = styled(Button).attrs({ type: 'button' })`
   color: var(--blue-2);
   border: 1px solid var(--blue-2);
+`;
+
+export const MainNavBarLink = styled.a`
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--neutral-1);
+
+  :hover {
+    text-decoration: none;
+  }
+
+  svg {
+    margin: 0 8px;
+    opacity: 0.72;
+  }
+`;
+
+const ChildNavBarLink = styled.a`
+  margin-bottom: 20px;
+  margin-left: 10px;
+  font-size: 15px;
+  color: var(--neutral-1);
+`;
+
+export const PersonalNavBarLink = styled(ChildNavBarLink)``;
+
+export const BusinessNavBarLink = styled(ChildNavBarLink)`
+  margin-bottom: 10px;
+`;
+
+export const NavBarLinkGroupLabel = styled.span`
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--neutral-1);
+`;
+
+export const NavBarGoBackButton = styled(MainNavBarLink).attrs({ type: 'button' })`
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'PayPalSansBig-Medium';
+
+  svg {
+    margin-left: 0;
+    margin-right: 8px;
+  }
 `;
 
 /**
@@ -63,10 +142,10 @@ export const IntroTitle = styled.h1`
 
 export const IntroSignUpButton = styled(Button)`
   width: 100%;
-  height: 48px;
+  height: 56px;
   margin-top: 40px;
   color: var(--blue-1);
-  font-size: 14px;
+  font-size: 16px;
   background: var(--yellow-1);
 `;
 
@@ -160,6 +239,7 @@ export const HelpingYouVideoContainer = styled.div`
   margin-bottom: 30px;
   padding-top: 56.25%;
   position: relative;
+  z-index: 1;
 `;
 
 export const HelpingYouVideo = styled.iframe`

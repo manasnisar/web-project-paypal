@@ -23,6 +23,8 @@ export default createGlobalStyle`
   :root {
     --blue-1: #0d3685;
     --blue-2: #0070ba;
+    --blue-3: #003087;
+    --blue-4: #009cde;
 
     --yellow-1: #fbb333;
     
@@ -47,6 +49,7 @@ export default createGlobalStyle`
 
   body {
     font-size: 16px;
+    overflow-x:hidden;
     -webkit-font-smoothing: antialiased;
     color: var(--neutral-2);
     background: var(--background);
