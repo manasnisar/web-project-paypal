@@ -1,22 +1,20 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  position: absolute;
-
   .navbar-wrapper-enter-active {
-    left: 0;
+    transform: translateX(0px);
   }
 
   .navbar-wrapper-enter-done {
-    left: 0;
+    transform: translateX(0px);
   }
 
   .navbar-wrapper-exit {
-    left: 0;
+    transform: translateX(0px);
   }
 
   .navbar-wrapper-exit-active {
-    left: -240px;
+    transform: translateX(-240px);
   }
 `;
 
@@ -25,15 +23,14 @@ export const NavBar = styled.nav`
   height: 100%;
   padding: 20px 16px;
   position: fixed;
-  top: 0;
-  left: -240px;
   display: flex;
   flex-direction: column;
+  transform: translateX(-240px);
   background: radial-gradient(
     circle farthest-side at center bottom,
     var(--blue-4),
     var(--blue-3) 125%
   );
   z-index: 2;
-  transition: left 300ms;
+  transition: transform 300ms;
 `;

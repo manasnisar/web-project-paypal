@@ -56,61 +56,62 @@ const App = () => {
   return (
     <>
       <BaseStyles />
+      <header>
+        <NavBar isOpen={navBarOpen}>
+          <s.MainNavBarLink onClick={() => setPersonalNavBarOpen(true)}>
+            PERSONAL <AiOutlineRight />
+          </s.MainNavBarLink>
+
+          <s.MainNavBarLink onClick={() => setBusinessNavBarOpen(true)}>
+            BUSINESS <AiOutlineRight />
+          </s.MainNavBarLink>
+
+          <s.MainNavBarLink>DEVELOPER</s.MainNavBarLink>
+          <s.MainNavBarLink>HELP</s.MainNavBarLink>
+        </NavBar>
+
+        <NavBar isOpen={personalNavBarOpen}>
+          <s.NavBarGoBackButton onClick={() => setPersonalNavBarOpen(false)}>
+            <AiOutlineLeft /> PERSONAL
+          </s.NavBarGoBackButton>
+
+          <s.PersonalNavBarLink>How PayPal Works</s.PersonalNavBarLink>
+          <s.PersonalNavBarLink>PayPal App</s.PersonalNavBarLink>
+          <s.PersonalNavBarLink>Buy and Shop</s.PersonalNavBarLink>
+          <s.PersonalNavBarLink>Send and Request Money</s.PersonalNavBarLink>
+          <s.PersonalNavBarLink>PayPal Credit and Cards</s.PersonalNavBarLink>
+          <s.PersonalNavBarLink>Start Selling</s.PersonalNavBarLink>
+        </NavBar>
+
+        <NavBar isOpen={businessNavBarOpen}>
+          <s.NavBarGoBackButton onClick={() => setBusinessNavBarOpen(false)}>
+            <AiOutlineLeft /> BUSINESS
+          </s.NavBarGoBackButton>
+
+          <s.NavBarLinkGroupLabel>PAYPAL COMMERCE PLATFORM</s.NavBarLinkGroupLabel>
+          <s.BusinessNavBarLink>Overview</s.BusinessNavBarLink>
+          <s.BusinessNavBarLink>Accept Payments</s.BusinessNavBarLink>
+          <s.BusinessNavBarLink>Make Payments</s.BusinessNavBarLink>
+          <s.BusinessNavBarLink>Manage Risk</s.BusinessNavBarLink>
+          <s.BusinessNavBarLink>Accelerate Growth</s.BusinessNavBarLink>
+          <s.BusinessNavBarLink>Streamline Operations</s.BusinessNavBarLink>
+
+          <s.NavBarLinkGroupLabel>SOLUTIONS FOR</s.NavBarLinkGroupLabel>
+          <s.BusinessNavBarLink>Businesses</s.BusinessNavBarLink>
+          <s.BusinessNavBarLink>Enterprises</s.BusinessNavBarLink>
+          <s.BusinessNavBarLink>Platforms & Marketplaces</s.BusinessNavBarLink>
+
+          <s.NavBarLinkGroupLabel>RESOURCES</s.NavBarLinkGroupLabel>
+          <s.BusinessNavBarLink>Getting Started</s.BusinessNavBarLink>
+          <s.BusinessNavBarLink>Pricing</s.BusinessNavBarLink>
+          <s.BusinessNavBarLink>Business Resource Center</s.BusinessNavBarLink>
+          <s.BusinessNavBarLink>Nonprofits</s.BusinessNavBarLink>
+        </NavBar>
+      </header>
       <s.Container>
         <CSSTransition in={navBarOpen} timeout={300} classNames="content">
           <div className="content">
             <s.Header>
-              <NavBar isOpen={navBarOpen}>
-                <s.MainNavBarLink onClick={() => setPersonalNavBarOpen(true)}>
-                  PERSONAL <AiOutlineRight />
-                </s.MainNavBarLink>
-
-                <s.MainNavBarLink onClick={() => setBusinessNavBarOpen(true)}>
-                  BUSINESS <AiOutlineRight />
-                </s.MainNavBarLink>
-
-                <s.MainNavBarLink>DEVELOPER</s.MainNavBarLink>
-                <s.MainNavBarLink>HELP</s.MainNavBarLink>
-              </NavBar>
-
-              <NavBar isOpen={personalNavBarOpen}>
-                <s.NavBarGoBackButton onClick={() => setPersonalNavBarOpen(false)}>
-                  <AiOutlineLeft /> PERSONAL
-                </s.NavBarGoBackButton>
-
-                <s.PersonalNavBarLink>How PayPal Works</s.PersonalNavBarLink>
-                <s.PersonalNavBarLink>PayPal App</s.PersonalNavBarLink>
-                <s.PersonalNavBarLink>Buy and Shop</s.PersonalNavBarLink>
-                <s.PersonalNavBarLink>Send and Request Money</s.PersonalNavBarLink>
-                <s.PersonalNavBarLink>PayPal Credit and Cards</s.PersonalNavBarLink>
-                <s.PersonalNavBarLink>Start Selling</s.PersonalNavBarLink>
-              </NavBar>
-
-              <NavBar isOpen={businessNavBarOpen}>
-                <s.NavBarGoBackButton onClick={() => setBusinessNavBarOpen(false)}>
-                  <AiOutlineLeft /> BUSINESS
-                </s.NavBarGoBackButton>
-
-                <s.NavBarLinkGroupLabel>PAYPAL COMMERCE PLATFORM</s.NavBarLinkGroupLabel>
-                <s.BusinessNavBarLink>Overview</s.BusinessNavBarLink>
-                <s.BusinessNavBarLink>Accept Payments</s.BusinessNavBarLink>
-                <s.BusinessNavBarLink>Make Payments</s.BusinessNavBarLink>
-                <s.BusinessNavBarLink>Manage Risk</s.BusinessNavBarLink>
-                <s.BusinessNavBarLink>Accelerate Growth</s.BusinessNavBarLink>
-                <s.BusinessNavBarLink>Streamline Operations</s.BusinessNavBarLink>
-
-                <s.NavBarLinkGroupLabel>SOLUTIONS FOR</s.NavBarLinkGroupLabel>
-                <s.BusinessNavBarLink>Businesses</s.BusinessNavBarLink>
-                <s.BusinessNavBarLink>Enterprises</s.BusinessNavBarLink>
-                <s.BusinessNavBarLink>Platforms & Marketplaces</s.BusinessNavBarLink>
-
-                <s.NavBarLinkGroupLabel>RESOURCES</s.NavBarLinkGroupLabel>
-                <s.BusinessNavBarLink>Getting Started</s.BusinessNavBarLink>
-                <s.BusinessNavBarLink>Pricing</s.BusinessNavBarLink>
-                <s.BusinessNavBarLink>Business Resource Center</s.BusinessNavBarLink>
-                <s.BusinessNavBarLink>Nonprofits</s.BusinessNavBarLink>
-              </NavBar>
-
               <s.HeaderButton
                 onClick={() => {
                   setNavBarOpen(value => !value);

@@ -4,27 +4,23 @@ export const Container = styled.div`
   .content {
     width: 100%;
     position: absolute;
-    transition: left 300ms;
-  }
-
-  .content-enter {
-    left: 0;
+    transition: transform 300ms;
   }
 
   .content-enter-active {
-    left: 240px;
+    transform: translateX(240px);
   }
 
   .content-enter-done {
-    left: 240px;
+    transform: translateX(240px);
   }
 
   .content-exit {
-    left: 240px;
+    transform: translateX(240px);
   }
 
   .content-exit-active {
-    left: 0;
+    transform: translateX(0px);
   }
 `;
 
