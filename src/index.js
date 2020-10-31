@@ -131,100 +131,91 @@ const App = () => {
             </s.Header>
             <main>
               <s.Intro>
-                <s.IntroContent>
+                <s.IntroTitleAndButton>
                   <s.IntroTitle>
                     With ways to pay, shop and chip in, we're here for you
                   </s.IntroTitle>
                   <s.IntroSignUpButton>Sign Up for Free</s.IntroSignUpButton>
-                </s.IntroContent>
+                </s.IntroTitleAndButton>
                 <s.IntroVideo muted autoPlay loop>
                   <source type="video/mp4" src={phoneVideo1} />
                 </s.IntroVideo>
               </s.Intro>
 
               <s.Business>
-                <s.BusinessTitle>Looking for PayPal for Business?</s.BusinessTitle>
+                <s.BusinessTitle>
+                  Looking for PayPal Business? Whether you're local or global, we're here to support
+                  you
+                </s.BusinessTitle>
                 <s.BusinessButton>PayPal for Business</s.BusinessButton>
               </s.Business>
 
-              <s.Feature>
-                <s.HelpingYouVideoContainer>
-                  <s.HelpingYouVideo src="https://www.youtube-nocookie.com/embed/Rr_sRAOn45Y?autoplay=0&amp;rel=0&amp;autohide=2&amp;border=0&amp;wmode=opaque&amp;showinfo=0&amp;hd=1&amp;playsinline=1&amp;enablejsapi=1&amp;modestbranding=1&amp;mute=1"></s.HelpingYouVideo>
-                </s.HelpingYouVideoContainer>
-                <s.FeatureTitle>Helping you come together</s.FeatureTitle>
-                <s.FeatureText>
-                  We’re all finding ways to come together. Now watch how we’ve been there to help,
-                  from securely paying your online Pilates instructor, to getting take out touch
-                  free.
-                </s.FeatureText>
-              </s.Feature>
-
-              <s.Feature whiteBg>
+              <s.Feature secondary>
                 <s.FeatureImage src={purpleYogaImage} />
-                <s.FeatureTitle>Send money in seconds</s.FeatureTitle>
-                <s.FeatureText>
-                  Do more with friends – send money, split bills and pool funds from friends quickly
-                  and easily, with just a mobile number or email address.
-                </s.FeatureText>
-                <s.FeatureLink>Download the App</s.FeatureLink>
+
+                <s.FeatureTextContainer>
+                  <s.FeatureTitle>Send money in seconds</s.FeatureTitle>
+                  <s.FeatureText>
+                    Do more with friends – send money, split bills and pool funds from friends
+                    quickly and easily, with just a mobile number or email address.
+                  </s.FeatureText>
+                  <s.FeatureLink>Download the App</s.FeatureLink>
+                </s.FeatureTextContainer>
               </s.Feature>
 
               <s.Feature>
                 <s.FeatureImage src={notificationsImage} />
-                <s.FeatureTitle>Get instant spend notifications</s.FeatureTitle>
-                <s.FeatureText>
-                  Whether shopping at your usual store or somewhere new, we help keep checkout fast
-                  and your eligible purchase protected. You also get instant spend notifications, so
-                  you can easily keep track of all your online hauls.
-                </s.FeatureText>
-                <s.FeatureLink>Download the App</s.FeatureLink>
+
+                <s.FeatureTextContainer>
+                  <s.FeatureTitle>Get instant spend notifications</s.FeatureTitle>
+                  <s.FeatureText>
+                    Whether shopping at your usual store or somewhere new, we help keep checkout
+                    fast and your eligible purchase protected. You also get instant spend
+                    notifications, so you can easily keep track of all your online hauls.
+                  </s.FeatureText>
+                  <s.FeatureLink>Download the App</s.FeatureLink>
+                </s.FeatureTextContainer>
               </s.Feature>
 
-              <s.Feature whiteBg>
+              <s.Feature secondary>
                 <s.FeatureImage src={payTouchFreeImage} />
-                <s.FeatureNewBadge>New</s.FeatureNewBadge>
-                <s.FeatureTitle>Pay touch-free</s.FeatureTitle>
-                <s.FeatureText>
-                  With the PayPal app, the only thing you need to touch when you pay in-person, is
-                  your own phone.
-                </s.FeatureText>
-                <s.FeatureLink>Learn More</s.FeatureLink>
+
+                <s.FeatureTextContainer>
+                  <s.FeatureNewBadge>New</s.FeatureNewBadge>
+                  <s.FeatureTitle>Pay touch-free</s.FeatureTitle>
+                  <s.FeatureText>
+                    With the PayPal app, the only thing you need to touch when you pay in-person, is
+                    your own phone.
+                  </s.FeatureText>
+                  <s.FeatureLink>Learn More</s.FeatureLink>
+                </s.FeatureTextContainer>
               </s.Feature>
 
               <s.Feature>
                 <s.FeatureImage src={coinyHillImage} />
-                <s.FeatureNewBadge>New</s.FeatureNewBadge>
-                <s.FeatureTitle>Save more when you shop online with Honey</s.FeatureTitle>
-                <s.FeatureText>
-                  Honey has joined the PayPal family. Use it to help find discounts at over 30,000
-                  retailers online. Plus, Honey is 100% free.
-                </s.FeatureText>
-                <s.FeatureLink>Join Honey</s.FeatureLink>
+
+                <s.FeatureTextContainer>
+                  <s.FeatureNewBadge>New</s.FeatureNewBadge>
+                  <s.FeatureTitle>Save more when you shop online with Honey</s.FeatureTitle>
+                  <s.FeatureText>
+                    Honey has joined the PayPal family. Use it to help find discounts at over 30,000
+                    retailers online. Plus, Honey is 100% free.
+                  </s.FeatureText>
+                  <s.FeatureLink>Join Honey</s.FeatureLink>
+                </s.FeatureTextContainer>
               </s.Feature>
 
-              <s.Feature whiteBg>
+              <s.Brands>
                 <s.FeatureTitle>Checkout with millions of brands you love</s.FeatureTitle>
                 <s.BrandsContainer>
-                  <s.BrandWrapper>
-                    <s.Brand src={huluLogo} />
-                  </s.BrandWrapper>
-                  <s.BrandWrapper>
-                    <s.Brand src={grubhubLogo} />
-                  </s.BrandWrapper>
-                  <s.BrandWrapper>
-                    <s.Brand src={potteryBarnLogo} />
-                  </s.BrandWrapper>
-                  <s.BrandWrapper>
-                    <s.Brand src={spotifyLogo} />
-                  </s.BrandWrapper>
-                  <s.BrandWrapper>
-                    <s.Brand src={ultaLogo} />
-                  </s.BrandWrapper>
-                  <s.BrandWrapper>
-                    <s.Brand src={grouponLogo} />
-                  </s.BrandWrapper>
+                  <s.Brand src={huluLogo} />
+                  <s.Brand src={grubhubLogo} />
+                  <s.Brand src={potteryBarnLogo} />
+                  <s.Brand src={spotifyLogo} />
+                  <s.Brand src={ultaLogo} />
+                  <s.Brand src={grouponLogo} />
                 </s.BrandsContainer>
-              </s.Feature>
+              </s.Brands>
 
               <s.JoinCommunity>
                 <s.JoinCommunityTitle>

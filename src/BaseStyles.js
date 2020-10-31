@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import 'react-toastify/dist/ReactToastify.css';
 
 export default createGlobalStyle`
   @font-face {
@@ -31,7 +30,7 @@ export default createGlobalStyle`
     --neutral-1: #fff;
     --neutral-2: #2c2e2f;
     --neutral-3: #6c7378;
-    --neutral-4: #f0f5ff;
+    --neutral-4: #f0f5fe;
     --neutral-5: #4a4a4a;
   }
 

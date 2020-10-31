@@ -124,21 +124,49 @@ export const Intro = styled.section`
   width: 100%;
   padding-top: 40px;
   background: var(--neutral-4);
+
+  @media screen and (min-width: 700px) {
+    height: 400px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 600px;
+  }
 `;
 
-export const IntroContent = styled.div`
+export const IntroTitleAndButton = styled.div`
   width: 100%;
   max-width: 320px;
   margin: auto;
+
+  @media screen and (min-width: 700px) {
+    width: calc(100% - 400px);
+    padding-right: 10px;
+    max-width: 600px;
+    z-index: 2;
+  }
 `;
 
 export const IntroTitle = styled.h1`
   text-align: center;
+
+  @media screen and (min-width: 700px) {
+    font-size: 40px;
+  }
+
+  @media screen and (min-width: 1000px) {
+    font-size: 48px;
+  }
 `;
 
 export const IntroSignUpButton = styled(Button)`
   width: 100%;
-  height: 56px;
+  max-width: 400px;
+  height: 50px;
+  margin: 0 auto;
   margin-top: 40px;
   color: var(--blue-1);
   font-size: 16px;
@@ -147,9 +175,17 @@ export const IntroSignUpButton = styled(Button)`
 
 export const IntroVideo = styled.video`
   width: 100%;
-  margin: 0 auto;
-  margin-top: 80px;
-  display: block;
+  max-width: 828px;
+  margin-top: 40px;
+  margin-bottom: -4px;
+
+  @media screen and (min-width: 700px) {
+    width: 40%;
+    max-height: 100%;
+    margin-bottom: 0;
+    margin-top: unset;
+    align-self: flex-end;
+  }
 `;
 
 /**
@@ -167,6 +203,10 @@ export const BusinessTitle = styled.h4`
   font-weight: 100;
   color: var(--neutral-1);
   text-align: center;
+
+  @media screen and (min-width: 700px) {
+    font-size: 26px;
+  }
 `;
 
 export const BusinessButton = styled(Button)`
@@ -189,11 +229,43 @@ export const Feature = styled.section`
   display: flex;
   flex-direction: column;
   text-align: center;
-  background: ${({ whiteBg }) => (whiteBg ? 'var(--neutral-1)' : 'var(--neutral-4)')};
+  background: ${({ secondary }) => (secondary ? 'var(--neutral-1)' : 'var(--neutral-4)')};
+
+  @media screen and (min-width: 700px) {
+    height: 500px;
+    flex-direction: ${({ secondary }) => (secondary ? 'row-reverse' : 'row')};
+    justify-content: center;
+    text-align: left;
+  }
+`;
+
+export const FeatureTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 700px) {
+    max-width: 520px;
+    margin: 0 20px;
+    align-items: flex-start;
+  }
 `;
 
 export const FeatureTitle = styled.h1`
   margin-bottom: 20px;
+
+  @media screen and (min-width: 700px) {
+    font-size: 26px;
+  }
+
+  @media screen and (min-width: 800px) {
+    font-size: 32px;
+  }
+
+  @media screen and (min-width: 1100px) {
+    font-size: 36px;
+  }
 `;
 
 export const FeatureImage = styled.img`
@@ -201,6 +273,12 @@ export const FeatureImage = styled.img`
   max-width: 260px;
   margin: auto;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 700px) {
+    max-width: 400px;
+    margin: 0 20px;
+    align-self: center;
+  }
 `;
 
 export const FeatureText = styled.span`
@@ -215,7 +293,7 @@ export const FeatureLink = styled.a`
 export const FeatureNewBadge = styled.span`
   width: 60px;
   height: 60px;
-  margin: auto;
+  margin: 0 auto;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
@@ -224,33 +302,30 @@ export const FeatureNewBadge = styled.span`
   font-size: 18px;
   color: var(--neutral-1);
   background: var(--yellow-1);
-`;
 
-/**
- * Helping you
- */
-
-export const HelpingYouVideoContainer = styled.div`
-  height: 0;
-  margin-bottom: 30px;
-  padding-top: 56.25%;
-  position: relative;
-  z-index: 1;
-`;
-
-export const HelpingYouVideo = styled.iframe`
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  @media screen and (min-height: 700px) {
+    width: 40px;
+    height: 40px;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 16px;
+  }
 `;
 
 /**
  * Brands
  */
 
+export const Brands = styled.section`
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: var(--neutral-1);
+`;
+
 export const BrandsContainer = styled.div`
+  margin-top: 32px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -262,8 +337,12 @@ export const BrandWrapper = styled.div`
 `;
 
 export const Brand = styled.img`
-  width: 100%;
   max-width: 120px;
+  margin: 12px;
+
+  @media screen and (min-height: 300px) {
+    margin: 6;
+  }
 `;
 
 /**
@@ -272,13 +351,22 @@ export const Brand = styled.img`
 
 export const JoinCommunity = styled(Feature)`
   padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   background: var(--blue-1);
 `;
 
 export const JoinCommunityTitle = styled.h1`
+  max-width: 600px;
   margin-bottom: 26px;
+  text-align: center;
   color: var(--neutral-1);
+
+  @media screen and (min-height: 700px) {
+    font-size: 36px;
+  }
 `;
 
 export const JoinCommunitySignUpButton = styled(IntroSignUpButton)`
@@ -306,12 +394,23 @@ export const CounterDigitWrapper = styled.div`
   align-items: center;
   border-radius: 8px;
   background: var(--blue-2);
+
+  @media screen and (min-height: 700px) {
+    width: 60px;
+    height: 80px;
+    margin: 2px;
+    border-radius: 24px;
+  }
 `;
 
 export const CounterDigit = styled.span`
   color: var(--neutral-1);
   font-size: 26px;
   font-weight: 700;
+
+  @media screen and (min-height: 700px) {
+    font-size: 30px;
+  }
 `;
 
 export const CounterLastDigitWrapper = styled(CounterDigitWrapper)`
@@ -355,6 +454,15 @@ export const CounterLastDigitAfter = styled(CounterLastDigit)`
   animation: bottomToMiddle 1s ease;
 `;
 
+export const Disclaimer = styled.div`
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--neutral-2);
+`;
+
 export const Footer = styled.footer`
   width: 100%;
   padding: 40px 20px;
@@ -381,13 +489,6 @@ export const FooterLinks = styled.div`
   a:last-child {
     margin-right: 0;
   }
-`;
-
-export const Disclaimer = styled.div`
-  padding: 40px 20px;
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--neutral-2);
 `;
 
 export const FooterTopLink = styled.a`
